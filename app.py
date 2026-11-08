@@ -12,8 +12,7 @@ st.set_page_config(
 )
 
 # Load trained model
-MODEL_PATH = Path("/content/waec_model.pkl")
-
+MODEL_PATH = Path(__file__).parent / "waec_model.pkl"
 @st.cache_resource
 def load_model():
     with open(MODEL_PATH, "rb") as file:
